@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal{
+            constructor(cor, tamanho){
+                this.cor =cor
+                this.tamanho = tamanho
+            }
+        }
+
+        /*
+            O metodo super fornece acesso para o metodo construtor da classe pai
+
+            deve ser colocado antes de qualquer atributo criado na classe
+        */ 
+        class Cachorro extends Animal{
+            constructor(){
+                super()
+                this.orelhas = 'grandes e caidas'
+            }
+        }
+
+
+        class Passaro extends Animal{
+            constructor(bico){
+                super('verde', 30)  // O metodo super encaminha parametro para o construtor da classe pai, como se fosse uma instancia da classe pai.
+                this.bico = bico
+            }
+        }
+
+        let passaro = new Passaro("curto");
+        console.log(passaro);
+    </script>
+</body>
+</html>

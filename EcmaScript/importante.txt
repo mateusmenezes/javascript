@@ -1,0 +1,14 @@
+O JS foi criado por Brendan Eich pra ser usado no netscape.
+Em 1997 o JavaScript fo ienviado para a associação dos fabricantes de computadores ECMA com intuito de padronizar a linguagem nas máquinas.
+
+* O que é paradigma de programação?
+	É Como se fosse um padrão/conduta de programação
+
+* observar que ao longo do desenvolvimentos dos softwares e linguagens de programação, com  criação de diversas linguagens, elas possuem funcionalidades particulares delas mesmo, logo, elas tem funcionalidades especiais que resolvem problemas mais facéis que outras.
+
+* O JavaScript pode trabalhar nos paradigmas de programação:
+--- Procedural/estruturada/imperativo
+	quer dizer que o proggrama pode ser resumido em três 	estruturas: sequenciais, condições e iterações
+
+
+* Para haver uma comunicação, precisa haver um protocolo, estabelecer uma regra para que possa haver essa troca de comunicação. Diante disso, quando nossa aplicação precisa se comunicar com uma aplicação externa, precisa ser feito uma comunicação e como não tem como transportar o objeto literal propriamente dito, usa-se a notação JSON.

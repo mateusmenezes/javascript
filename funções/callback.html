@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções de callback</title>
+    <script>
+        /*
+        --- Funcoes de callback são funcoes encaminhada como parametros para outras funções
+        --- Funcoes que são parametros de outras funçoes
+        --- Funcoes de callback são funções anonimas, portanto, ela pode ser usada no metodo de wrapper dentro de uma variavel
+        --- OBSERVAR que quando se passa só a variavel como parametro sem parenteses, ta indo a a referencia da função sem ser executada, mas se for colocado os parenteses na callback o interpretador vai entender que deve executar a função e usar o retorno como parametro
+        */
+
+         function ArtigoAntigo(id, callbackSucesso, callbackErro){
+             if(true){
+                 callbackSucesso('dados recuperados', 'funcoes de callback')
+             }else{
+                 callbackErro('Erro ao recuperar os dados')
+             }
+         }
+
+         var callbackSucesso = function(titulo, descricao) {
+             document.write('<h1>' + titulo + '</h1>')
+             document.write('<hr>')
+             document.write('<p>' + descricao + '</p>')
+         }
+         var callbackErro = function(erro) {
+             document.write('<p><b>Erro:</b>' + erro + '</p>')
+        }
+
+        ArtigoAntigo(1, callbackSucesso, callbackErro)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

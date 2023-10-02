@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+        /*
+        try - tentar
+        catch - pegar
+        finally - finalmente
+        throw - lançar
+        
+        utiliza-se o throw para lançar "coisas" para que "alguém" faça algo com essa coisa
+        serve para forçar uma parada no script com um erro
+
+        */
+        throw new Error('houve um problema ')
+        // quando usamos o bloco try, devemos fazer um tratamento ou finalizar aquela ação
+        let vetor = [
+            ['fullmetal', 'anime']
+        ]
+        function getVideo(video){
+            try{
+            // aqui fica a parte onde é possivel ter erros
+            console.log(vetor[1]['video'])
+
+            // catch recebe como parametro o erro(recebe o erro e faz o tratamento)
+            }catch(e){
+                console.log("agora aqui trataremos o erro")
+            }finally{
+            // sempre tem que passar por aqui
+            console.log('sempre passa por aqui(try/catch)')
+
+            }
+        }
+        getVideo()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

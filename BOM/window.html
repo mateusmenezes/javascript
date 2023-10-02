@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            window é a janela do browser onde todo o documento é renderizado
+
+            o BOM é o modelo de objetos do browser, como o DOM é a API para acessar os elementos HTML, o BOM acessa os elementos do browser
+        */
+
+        /*
+            Window é um objeto, portanto, tem metodos e propriedades, alem disso, é um objeto formado pelo browser  
+
+            para usar um metodo de fechar janela, tem que ter aberto uma pela aplicação
+        */
+        let janela
+         function abrirPopUp(){
+            janela = window.open('https://www.google.com', 'nova_janela', 'width=500, height=500');
+         }
+
+         /*
+            para fechar uma janela, tem que indicar qual a janela que tem que fechar, por isso, deve atribuir a janela para uma variavel e dessa variavel usar um metodo de fechamento
+         */
+         function fecharPopUp(){
+            janela.close()
+         }
+    </script>
+</head>
+<body>
+        <button onclick="abrirPopUp()">Abrir janela</button>
+        <button onclick="fecharPopUp()">fechar janela</button>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manipulação de datas</title>
+    <script>
+        //  objetos de data são criados com o new Date()
+
+        // o sistema de data se baseia no sistema operacional da maquina onde o navegador está rodando
+        var data = new Date()
+        // document.write(data.getDate() + '/' + data.getMonth() + '/' + data.getFullYear())
+
+        // adicionar ou remover dia
+        document.write(data.toString())
+        document.write('<hr>')
+        data.setDate(data.getDate() + 1)
+        document.write(data.toString())
+        document.write('<hr>')
+        data.setDate(data.getDate() - 3)
+        document.write(data.toString())
+        
+        //adicionar ou remover meses
+        document.write('<hr>')
+        data.setMonth(data.getMonth() + 1)
+        document.write(data.toString())
+        document.write('<hr>')
+        data.setMonth(data.getMonth() - 4)
+        document.write(data)
+
+        // Adicionar ou remover ano
+        document.write('<hr>')
+        data.setFullYear(data.getFullYear() + 1)
+        document.write(data)
+
+
+        // manipulações algebricas de data
+        let data1 = new Date.now();
+        let data2 =  new Date();
+        data2.setDate(data1.getDate() + 6);
+        data2.setMonth(data1.getMonth() + 4);
+        data2.setFullYear(data1.getFullYear() + 1);
+
+        let dia;
+        dia = (data2.getDate() - data1.getDate());
+        document.write('<br><br> a' + data1)
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

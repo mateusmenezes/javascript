@@ -1,0 +1,15 @@
+BOM - Browser Object Model
+API que permite acessar, via JS, recursos do navegador
+
+
+setTimeout() -> Executa a ação uma vez  após o tempo informado
+
+    setTimeout(<ação>, <Tempo em milissegundos>)
+    clearTimeout()
+
+
+
+setInterval() -> Sempre executa a ação após o período informado.
+
+    setInterval(<ação>, <tempo em milissegundos>)
+    clearInterval()

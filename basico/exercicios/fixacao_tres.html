@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fixação 3</title>
+    <script>
+        var num1 = parseInt(prompt('Digite um numero'));
+        var opcao = prompt("Digite a operação (s para soma, e sb para subtração): ");
+        var num2 = parseInt(prompt('Digite o segundo numero'));
+        function calcular_numero(num1, num2, opcao) {
+            if(opcao == "s" || opcao== "S"){
+                var soma = num1 + num2
+                return 'o resultado é: '+ soma
+
+            }else if(opcao == "sb" || opcao== "SB"){
+                var subtracao = num1 - num2
+                return 'o resultado é: '+ subtracao
+
+            }
+        }
+        var funcao = calcular_numero(num1, num2, opcao)
+        document.write(funcao)
+        
+    </script>
+</head>
+
+
+
+
+<body>
+    
+</body>
+</html>

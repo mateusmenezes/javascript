@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function soma(){
+            /*
+                --- A função descarta todos os parametros adicionais se houver passado da quantidade de parametros ja declarado
+
+                --- Arguments é uma instrução que retorna a relação de parametros passados para a função, representa uma variavel local, objeto disponivel dentro da função
+
+                --- A variavel arguments recupera os parametros como se fosse um array passado para a função
+            */
+
+           let resultado = 0;
+           for( let x in arguments){
+                resultado += arguments[x];
+           }
+           return resultado; 
+        }
+       
+        console.log(soma(7,14,21));
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <script>
+        let objetos = ['cadeira', 'impressora', 'garfo'];
+        function adicionaValor(){
+            let valor, verifica;
+            valor =  document.getElementById('campo_texto').value;
+            if(valor === ''){
+                alert("Digite um valor válido");
+            }else{
+                let verifica = objetos.indexOf(valor);
+                if(verifica === -1){
+                    objetos.push(valor);
+                    console.log(objetos);
+                }else{
+                    alert("Objeto ja foi adicionado");
+                }
+            }
+            document.getElementById('campo_texto').value = '';
+        }
+        function ordenaVetor(){
+            objetos.sort();
+            console.log(objetos);
+        }
+    </script>
+<body>
+    <input type="text"
+    placeholder="Digite um texto"
+    id="campo_texto"
+    >
+    <button onclick="adicionaValor()">Adicionar</button>
+    <button onclick="ordenaVetor()">Ordenar</button>
+
+
+</body>
+</html>

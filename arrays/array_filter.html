@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         /*
+            ----- Array.filter() é um método do objeto array que atua sobre o array com um proposito de filtrar o array, o metodo retorna um array conforme as condições passadas
+
+
+
+            ----- O metodo filter recebe como parametro uma funcao de callback que tem como parametros opcionais: element, index, array;
+             -> element: o elemento que está sendo processado no array
+             -> index: O indice do elemento atual que está sendo processado no array.
+
+            -> Array: O array para qual o metodo foi chamado.
+         */
+         let funcionarios = [{nome:'Maria',cargo:'analista', salario:3100, status:'ativo' },
+          {nome:'miguel',cargo:'assistente adm', salario:1700, status:'ativo'}, 
+          {nome:'rosa',cargo:'auxiliar de contabillidae', salario:1600, status:'inativo'},
+           {nome:'roberto',cargo:'programdor PHP', salario:4500, status:'ativo'}, 
+           {nome:'Fernanda',cargo:'engenheira mecanica', salario:7500  , status:'ativo'}];
+
+            // O metodo filter vai retornar um array com todos os valores que a função callback retornou verdadeiro. OBSERVAR que a função dentro do filter  retorna algo que é um valor logico verdadeiro ou falso, se verdadeiro, é jogado para o novo array.
+           let teste = funcionarios.filter(f => {return f.salario < 2000}).filter(f => {return f.status == 'ativo'});
+
+        //    OBSERVAR que para fazer diversos filtros, chama-se o mesmo metodo diversas vezes na mesma linha
+           console.log(teste)
+           
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

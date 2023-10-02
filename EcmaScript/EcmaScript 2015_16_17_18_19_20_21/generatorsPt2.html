@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="teste">
+        <button type="button" onclick="acao()">Avançar</button>
+        <label for="resposta">Resposta:</label>
+        <input type="text" placeholder="Resposta" id="resposta">
+    </div>
+    <script>
+        /*
+            A feature generator pode ser usado para ler em partes um array de objetos ou leitura de arquivos
+
+            Funções generator tem escopo próprio, além disso, o método next pode receber parâmetros.
+        */ 
+
+        function* conversar(){
+            let opcao = yield "E aí, tudo bem?"; // A atribuição do yield para uma variável passa para o compilador que ele vai receber mais alguma coisa de entrada para a próxima iteração(next)
+            console.log(opcao);// parametro recebido do next
+            if(opcao == "sim"){
+                yield "otimo, fico feliz";
+            }else {
+                yield "Respire fundo e tenha paciencia";
+            }
+        }
+        
+        let conversa = conversar();
+        
+        function acao(){
+            let resposta = document.getElementById("resposta").value;
+            let iteracao = conversa.next(resposta);
+
+        }
+    </script>
+</body>
+</html>

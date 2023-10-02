@@ -1,0 +1,54 @@
+/*
+querySelector -> Seleciona o primeiro elemento dentro do documento que corresponde ao grupo especificado.
+
+querySelectorAll -> Retorna uma lista de elementos que corresponde com o grupo especificado.
+
+addEventListener -> adiciona um manipulador de eventos ao elemento especificado. Esse metodo recebe dois parametros: o primeiro é o tipo de evento e o segundo especifica a função a ser executada quando o evento ocorre.
+
+timeupdate -> Esse evento é disparado quando o horário indicado pelo CurrentTime atributo é atualizado
+
+currentTime -> tempo atual, em segundos, de onde a música/video está.
+
+setAttribute -> adiciona um atributo ao elemento ou modifica o atributo já existente. Possui dois parametros: primeiro o nome do atributo como string, segundo o novo valor do atributo.
+
+
+O método .map() recebe uma função de callback, chama essa função para todos os elementos do array e retorna um novo array com o resultado
+	EXEMPLO
+const transactionsAmounts = dummyTransactions.map(transaction => transaction.amount);
+
+
+
+o metodo reduce() recebe dois parametros, uma callback e um inicializador. A callback recebe 4 parametros(ACUMULADOR, ITEM, INDEX, ARRAY ORIGEM), e vai ser chamada para cada elemento do array retornando um unico numero
+	EXEMPLO:
+const total = transactionsAmounts.reduce((accumulator, transaction) => accumulator + transaction, 0);
+
+
+/o metodo filter() deve receber uma condição(true or false), receber um boolean para verificar e fazer o filtro dos elementos
+	EXEMPLO:
+const expense = transactionsAmounts.filter(transaction => transaction < 0);
+
+event.preventDefault() -> cancela um evento se for cancelável, sem parar a propagação do evento.
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

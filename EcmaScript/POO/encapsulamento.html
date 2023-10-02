@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encapsulamento</title>
+</head>
+<body>
+    <script>
+        /*
+            O Encapsulamento serve para controlar o acesso aos atributos e métodos de uma classe. É uma forma eficiente de proteger os dados manipulados dentro da classe, além de determinar onde esta classe poderá ser manipulada
+        */ 
+
+        class Tv{
+            _relacaoCanais
+            _canalAtivo
+            _volume
+            constructor(){
+                this._relacaoCanais = [2, 4, 5, 7, 10]
+                this._canalAtivo = 5
+                this._volume = 5
+            }
+            /*
+                metodo getters and setters 
+                
+                nesses metodos dão acessos aos atributos da classe por meio de uma assinatura de uma funcao, logo, por meio do metodo, podemos recuperar um valor e retornar esse valor como um retorno de uma funcao
+            */ 
+
+            get canalAtivo(){
+                return this._canalAtivo
+            }
+
+            set canalAtivo(canal){
+                if(this._relacaoCanais.indexOf(canal) !== -1){
+                    this._canalAtivo = canal
+                }
+                
+            }
+        }
+
+        let tv = new Tv()
+        /*
+            observar que estou acessando o atributo canal ativo pelo metodo get, pois ele é privado e não tem como acessar diretamente
+
+            Observar que é uma função, mas não se usa os parênteses, pois o JS tem a inteligência de saber que são métodos getters e setters. Se estiver sendo atribuido um valor,o JS vai buscar o metodo set, se não, vai buscar o metodo get.
+        */ 
+       tv.canalAtivo = 3
+        console.log(tv.canalAtivo)
+
+
+
+
+
+    </script>
+</body>
+</html>

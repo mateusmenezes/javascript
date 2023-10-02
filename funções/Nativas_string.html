@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcoes nativas para manipular strings</title>
+    <script>
+        /*
+            O tipo primitivo de string por si só não possui métodos ou propriedades, mas o JS ele tem a inteligencia de transformar a string em um objeto e o proprio JS disponibilidade atributos e metodos nativos dele mesmo
+        */ 
+        document.write('Mateus Menezes'.length)
+
+        // charAt() retorna o caractere do indice indicado ex: charAt(9) vai retornar o caractere da posição 9
+        document.write('Mateus Menezes'.charAt(9))
+
+        //indexOf retorna o indice do caractere indicado na sua primeira ocorrencia, caso não exista, o metodo retorna -1
+        document.write('Mateus Menezes'.indexOf('e'))
+
+        //replace faz uma troca entre o valor identico informado para o outro valor que quer colocar
+        document.write('Mateus Menezes'.replace('Menezes', 'Helcias'))
+
+
+        //substr faz um "corte" para recuperar determinada partte da string o primeiro valor é a posição e o segundo valor é a quantidade
+
+        document.write('Mateus Menezes'.substr(7, 7))
+
+
+
+
+    </script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade para fixação</title>
+
+</head>
+<body>
+    <input type="text"
+        id="campo_texto"
+        onfocus="mudaCor('#FFFF00')"
+        onblur="mudaCorCaractere('red', 'green')"
+    >
+
+    <script>
+        function mudaCor(cor) {
+            document.getElementById('campo_texto').style.backgroundColor = cor
+        }
+        function mudaCorCaractere(vermelho, verde) {
+            let QntCaractere = document.getElementById('campo_texto').value
+            if (QntCaractere.length <= 3) {
+                document.getElementById('campo_texto').style.backgroundColor = vermelho
+            }else{
+                document.getElementById('campo_texto').style.backgroundColor = verde
+            }
+        }
+    </script>
+</body>
+</html>

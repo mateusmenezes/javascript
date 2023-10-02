@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionando elementos da pagina</title>
+
+    <script>
+        console.log(document.getElementById('nome_usuario'))
+
+        /*
+        Selecionar elementos da pagina pelo ID o element é sem S pois pega um valor unico do body, ja nos outros metodos usa-se elements pois pode pegar varios elementos.
+
+        metodos de seleção mais utilizados: 
+        getElementById('nome_usuario'),
+        getElementsByTagName('input'),
+        getElementsByClassName('campo_texto'),
+        getElementByName('nome')
+
+        
+        */
+    </script>
+</head>
+<body>
+    <input 
+    placeholder="Digite seu nome"
+    id="nome_usuario"
+    class="campo_texto"
+    name = "nome"
+    type="text">
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+ API -> Application programming Interface(Interface de programação de aplicações) É um conjunto de rotinas e padrões estabelecidos por um software para a utilização das suas funcionalidades por aplicativos que não pretendem envolver-se em detalhes da implementação do software, mas apenas usar seus serviços.
+
+Os navegadores modernos implementam recursos de armazenamento de dados no proprio navegador.
+
+a API Web Storage tem dois mecanismos para se guardar esses dados no browser do usuario:
+
+ - sessionStorage -> Os dados ficam armazenados até o termino da sessão, ou seja, se o usuario fechar o browser ou até mesmo recarregar, os dados são apagados.
+
+- localStorage -> Mantem os dados gravados mesmo se o browser for fechado e reaberto. O objeto localStorage tem 4 metodos:
+	* localStorage.setItem()
+		setItem recebe dois parametros: o objeto(identificacao) e o dado que vai ser armazenado, mas o dado deve ser encaminhado em formato JSON;
+	* localStorage.getItem()
+	* localStorage.removeItem()
+	* localStorage.clear()

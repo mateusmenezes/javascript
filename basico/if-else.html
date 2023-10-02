@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if/else e operadores</title>
+    <script>
+        // Operador ternário: a condição fica dentro da propria variavel
+        // sintaxe: var A = <condição> ? true : false
+        //
+        var a = parseInt(prompt('Digite a primeira nota'))
+        var b = parseInt(prompt('digite a segunda nota'))
+        var media = parseInt(prompt("digite a media minima da sua escola: "))
+        var notaAluno = (a + b)/2
+        if(notaAluno >= media){
+            console.log(notaAluno)
+            document.write('Condição aprovada')
+
+        }else{
+            console.log(notaAluno)
+            document.write('condição reprovada')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

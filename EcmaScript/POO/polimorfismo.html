@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+            O polimorfismo é basicamente a sobrescrita de métodos, quando uma classe filho sobrescreve métodos do classe pai
+        */ 
+        class Animal{
+            constructor(){
+                this.cor = '';
+                this.tamanho = null;
+            }
+
+            dormir(){
+                console.log("Dormir");
+            }
+        }
+
+        class Passaro extends Animal{
+            constructor(){
+                super();
+                this.bico = 'curto';
+            }
+
+            voar(){
+                console.log("Voar");
+            }
+        }
+
+        class Avestruz extends Passaro{
+            constructor(){
+                super();
+            }
+
+            enterrarCabeca(){
+                console.log("Enterrar a cabeça");
+            }
+
+            voar(){ // sobrescrevendo uma caracteristica da classe pai
+                return false;
+            }
+        }
+
+
+        let passaro = new Passaro();
+        console.log(passaro)
+
+        let avestruz = new Avestruz();
+        avestruz.voar();
+
+    </script>
+</body>
+</html>

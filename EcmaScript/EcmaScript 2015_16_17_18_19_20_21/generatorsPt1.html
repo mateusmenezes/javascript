@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+        /*
+            São funções que podem ser executadas, pausadas ou continuadas em diferentes estágios da execução.
+            Para criar uma função generator, basta colocar o asterisco em frente no nome function
+        */
+        function* generators (){
+            yield "t 1"; // vai retornar o objeto da mesma forma do retorno
+            yield console.log("t 2"); // a yield vai executar tudo que vem antes dela incluindo a linha que ela está
+            console.log("t 3");
+
+            return "t 4";
+        }
+
+
+        let meuGenerator = generators(); // recebe um Objeto iterator
+        // O retorno da função vai ser um objeto: com o valor e o estado da execução(vai ser true se o generator chegar ao fim)
+
+        // Objeto iterator é quando se sabe como acessar itens numa coleção, um por vez, enquanto mantém rastreada a posição atual em uma dada sequencia.
+        meuGenerator.next()
+         
+        meuGenerator.next()
+    </script>
+</body>
+</html>

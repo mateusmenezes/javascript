@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        let pessoas = [
+            {
+                nome: 'Mateus',
+                idade: 20,
+                peso: 46,
+                numero: 120
+            },
+            {
+                nome: 'perpetua',
+                idade: 46,
+                peso: 58,
+                numero: 150
+            },
+            {
+                nome: 'vladimir',
+                idade: 53,
+                peso: 62,
+                numero: 230
+            }
+        ]
+
+        // for( let x in pessoas){
+        //     console.log(pessoas[x].nome)
+        // }
+        let fun = function(valor){
+            console.log(valor.peso)
+        }
+        pessoas.forEach(fun)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

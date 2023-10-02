@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando valores de input de textos</title>
+    <script>
+        function distribuicaoCaractere() {
+            // pegando o valor do elemento e guardando dentro de uma variavel
+            let caractere = document.getElementById('campo_texto').value
+            
+            
+            // limpando a variavel para um novo teste
+            document.getElementById('campo_texto').value = ''
+            
+            
+            // limpando os espaços em branco da string para proteger de eventuais erros
+            caractere.trim()
+
+            switch(caractere){
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    // pegando elementos e adicionando apenas nos numeros 
+                    document.getElementById('numero').value += caractere
+                    break
+                default:
+                    // pegando elementos e adicionando apenas letras 
+                    document.getElementById('letra').value += caractere
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <input
+    onkeyup = "distribuicaoCaractere()"
+    type="text"
+    id="campo_texto"
+    placeholder="Digite um texto"
+    >
+    
+    
+    <br><br>
+    <label for="letra">letras</label><br>
+    
+    
+    <input
+    type="text"
+    id="letra"
+    disabled    
+    >
+    
+    
+    <br><br>
+    <label for="numero">numero</label><br>
+
+    <input
+    type="text"
+    id="numero"
+    disabled
+    >
+
+
+</body>
+</html>

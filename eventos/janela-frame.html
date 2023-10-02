@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>janelas ou frames</title>
+    <script>
+        /*
+        Está ligado a manipulação da região de exibição da pagina, é um evento específico do body pois o BODY é um elemento que está ocupando a janela
+
+        onresize -> quando a pagina é redimensionada
+        onscroll -> É um evento que acontece quando o scroll do mouse é utilizado 
+        */
+        a = 12;
+       function acao(){
+        document.body.style.backgroundColor = "#" + a;
+        a += 100;
+        console.log(a)
+       }
+
+    </script>
+</head>
+<body id="teste" onresize="acao()">
+    
+</body>
+</html>

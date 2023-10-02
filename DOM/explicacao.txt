@@ -1,0 +1,7 @@
+O dom é o Document Object Model
+"MODELO DE DOCUMENTO DE OBJETOS"
+
+É uma API que dá acesso, através do JS, a todos os elementos da página
+
+todos os elementos html estão contidos dentro de um objeto document em uma estrutura de arvore, a partir desses atributos desses elementos fazer a seleção
+

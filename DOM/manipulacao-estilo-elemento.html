@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de estilo de elementos</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        .boxColor{
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid red;
+            margin: 0 auto;
+            background-color: aqua;
+        }
+        .boxColor button {
+            width: 20%;
+            height: 20%;
+            cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    
+
+    <div class="boxColor" id ="boxColor0">
+        <button type="button" onclick="mudaCor('vermelho')"> vermelho</button>
+        <button type="button" onclick="mudaCor('azul')"> Azul</button>
+        <button type="button" onclick="mudaCor('amarelo')"> Amarelo</button>
+    </div>
+
+    <script>
+        function mudaCor(parameter){
+            let elemento = document.getElementById("boxColor0")
+
+            console.log(parameter);
+            switch(parameter){
+                case "amarelo":
+                    elemento.style.backgroundColor = 'yellow';
+                    break;
+                case "azul":
+                    elemento.style.backgroundColor = 'blue'; 
+                    break;
+                case "vermelho": 
+                    elemento.style.backgroundColor = 'red';
+                    break;
+            }
+        }
+
+    </script>
+</body>
+</html>

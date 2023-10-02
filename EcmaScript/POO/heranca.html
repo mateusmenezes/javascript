@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal{  // Classe mais generica(Classe pai), comum ás outras classes
+            constructor(){
+                this.cor = '';
+                this.tamanho = null;
+            }
+
+            dormir(){
+                console.log("Dormir");
+            }
+        }
+
+
+
+        // Para fazer a herança da classe animal para as classes passaro e cachorro, usa-se o a palavra reservada EXTENDS
+
+        class Cachorro extends Animal{
+            constructor(){
+                super();
+                this.orelhas = 'grandes e caidas';
+            }
+            correr(){
+                console.log("Correr");
+            }
+
+            rosnar(){
+                console.log("Rosnar");
+            }
+
+        }
+
+        class Passaro extends Animal{
+            constructor(){
+                super();
+                this.bico = 'curto';
+            }
+
+            voar(){
+                console.log("Voar");
+            }
+        }
+
+        let cachorro = new Cachorro();
+        let passaro = new Passaro();
+        cachorro.dormir();
+        console.log(cachorro)
+        console.log(passaro)
+
+    </script>
+</body>
+</html>

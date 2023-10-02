@@ -1,0 +1,51 @@
+------------------   PALAVRAS CHAVES    -----------------
+Paradigma - É uma forma, padrão, conduta
+
+Entidade - Abstrair/ trazer algo do mundo real para dentro da programação
+
+Abstração - Isolar um objeto de reflexão de fatores relacionados na realidade
+
+Instanciar - A instanciação é um processo por meio do qual se realiza a cópia de um objeto (classe) existente.
+
+Superclasse - É a classe pai, a classe mais genérica
+
+Subclasse -  É a classe filho, que herda os atributos e métodos do pai.
+
+---------------------------------------------------------
+
+                        PILARES DE POO
+
+ABSTRAÇÃO:
+    - Entidade - Algo do mundo real pra dentro da programação.
+
+    - Identidade - Instanciar uma entidade, identificar de forma unica os objetos gerados da entidade.
+
+    - Caracteristicas - Atributos
+
+    -Ações - métodos
+
+
+
+ENCAPSULAMENTO:
+    Consiste em encapsular um objeto de modo a tornar o objeto seguro. O objeto tem condições de dizer o que dentro dele está disponivel pro sistema.(capacidade de deixar os atributos privado).
+    Uma forma de dar visibilidade as Atributos e metodos conforme a necessidade.
+
+    getters and setters -> dão acessos a atributos e metodos privados do objeto.
+
+    get -> Recupera um atributo do objeto e funciona como uma função. A partir dessa função, retorna o valor que quer retornar.
+
+    set -> recupera um valor e seta o valor, e pode-se aqui, adicionar uma verificação para a modificacao do atributo.
+
+
+HERANÇA:
+    Uma classe pai pode extender seus atributos e metodos para os filhos e cada filho, alem de receber as Caracteristicas do pai, possui caracteristicas proprias.
+
+    -> Usa-se o termo EXTENDS para herdar e o operador super() para os filhos.
+
+    METODO SUPER:
+        Fornece acesso ao construtor da classe pai(somente para a classe filha)
+
+
+
+POLIMORFISMO:
+    capacidade de herdar os atributos e métodos do pai e então, sobrescrever os métodos da classe pai.(Permite sobrescrever os métodos da classe pai).

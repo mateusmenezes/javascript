@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de indice de massa corporal</title>
+    <script>
+        var nome = prompt('Digite o nome da pessoa: ')
+        var altura = parseInt(prompt('Digite a altura da pessoa em CM: '))
+        altura_att = altura/100
+        
+        var peso = parseFloat(prompt('Digite o peso da pessoa: '))
+        m = peso/(altura_att ** 2)
+        
+        var m = m.toFixed(2)
+        console.log(m)
+        if(m < 16){
+            document.write(nome + ' possui indice de massa corporal igual a '+ m + ', sendo classificado como: Baixo peso muito grave')
+        } else if(m >= 16 && m < 17){
+            document.write(nome + ' possui indice de massa corporal igual a '+ m + ', sendo classificado como: Baixo peso grave')
+        } else if(m >= 17 && m < 18.5){
+            document.write(nome + ' possui indice de massa corporal igual a '+ m + ', sendo classificado como: baixo peso')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

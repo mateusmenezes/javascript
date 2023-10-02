@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        // função anonima é uma função dentro de uma variavel 
+        let quadrado = function(x = 5){
+            
+            return x * x
+        }
+        console.log(quadrado(3))
+        // arrow function = se omite o nome function e so poe os parametros e uma flecha sequencialmente do bloco de codigo da função
+
+        // observar que se passar somente um parametro, podemos omitir os parenteses, ja quando não tem nenhum parametro usa-se o parenteses
+        let quadrado_2 = (x = 5) =>{
+            
+            return x * x
+        }
+        console.log(quadrado_2(3));
+
+        // quando tem somente uma unica instrução, podemos omitir a palavra 'return', podemos colocar somente a instrução que queremos retornar
+        let quadrado_3 = x => x * x; // return implicito
+
+
+        let parOuImpar = numero => numero % 2 === 0 ? "par": "impar";
+        console.log(parOuImpar(11)); 
+        
+    </script>
+</body>
+</html>

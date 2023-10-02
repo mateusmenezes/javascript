@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abstracao</title>
+</head>
+<body>
+    <script>
+        // a classe é o modelo do objeto ( define o comportamento dos seus objetos) que são as caracteristicas(atributos) e ações(métodos)
+
+
+        // o método constructor faz a construção do objeto com as instruções baseada na classe
+        // o this é uma instrução reservada para fazer a criação de um atributo dentro da classe
+
+
+        // as ações(métodos) são definidas dentro das classes como uma assinatura de função, logo, os métodos são funções dentro do objeto
+
+        class contaBancaria{
+
+            constructor(){
+                this.agencia = 1068;
+                this.numeroConta = 1425179;
+                this.saldo = 120;
+                this.limite = 1000;
+            }
+            depositar(valorDeposito){
+                this.saldo += valorDeposito;
+            }
+            sacar(valorSaque){
+                this.saldo -= valorSaque;
+            }
+            consultarSaldo(){
+                return this.saldo;
+            }
+        }
+
+        // o objeto é a instancia do modelo, isto é, o objeto é a cópia de uma classe. O operador NEW faz essa instanciação para a variável
+
+        // Logo, podemos criar quantos objetos forem necessários apenas instanciando a classe já definida
+
+        let contaUm = new contaBancaria();
+        let contaDois = new contaBancaria();
+        contaUm.depositar(500);
+        contaUm.sacar(600)
+        console.log(contaUm.consultarSaldo());
+
+
+        /*
+            Software de marcenaria
+            criação de cadeira e sofá:
+            - cadeira possui cor, quantidade de pernas e possibilidade de girar
+            - ações se gira ou não
+        */
+       class Cadeira{
+            constructor(cor, pernas, giro){
+                this.cor = cor
+                this.pernas = pernas
+                this.giro = giro
+            }
+
+            giraCadeira(){
+                if(this.giro === true){
+                    console.log("A cadeira é giratoria")
+                }else{
+                    console.log("A cadeira não é giratoria")
+                }
+            }
+        }
+        class Sofa{
+            constructor(reclinavel, lugares, design){
+                this.reclinavel = reclinavel
+                this.lugares = lugares
+                this.design = design
+            }
+            reclinavel(){
+                if(this.reclinavel === true){
+                    console.log("Sofa reclinavel")
+                }else{
+                    console.log("Modelo não reclinavel")
+                }
+            }
+            modelo(){
+                console.log(`Modelo é: ${this.design}`)
+            }
+        }
+
+
+        let primeiraCadeira = new Cadeira('azul', 1, true)
+        let segundaCadeira = new Cadeira('preto', 4, false)
+
+        console.log(primeiraCadeira.giraCadeira())
+        console.log(segundaCadeira.giraCadeira())
+
+        let sofa = new Sofa(true, 5, 'classico')
+        let sofa2 = new Sofa(true, 5, 'moderno')
+        sofa2.modelo()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Operador REST/SPREAD(contexto REST)
+
+        /*
+            Operador REST/SPREAD é definido por 3 pontos (...), o que difere entre REST e SPREAD é o contexto que está sendo usado.
+
+            SPREAD -> espalhar as estruturas de dados
+            REST -> juntar as estruturas de dados
+
+            o operador REST é usado mais no contexto de funções
+        */ 
+
+        // a variavel parametro vai receber todos os parametros passados e vai juntar em uma estrutura de dados(array) 
+        function soma(...parametro){
+            // [parametro] = [3, 6, 4, 8]
+            let resultado = 0
+
+            parametro.forEach(function(valor){
+
+                resultado += valor;
+
+            })
+
+
+
+            return resultado
+        }
+
+        let resultado = soma(3, 6, 4, 8)
+        console.log(resultado)
+
+
+
+        function multiplicador(m, ...param){
+            // m = 5 e param = [10, 4, 12, 6, 8]
+            let resultado = 0
+
+            param.forEach(function(valor){
+                resultado += (m * valor)
+            })
+
+            return resultado
+        }
+        let resultado2 = multiplicador(5, 10, 4, 12, 6, 8)
+        console.log(resultado2)
+
+
+    </script>
+</body>
+</html>

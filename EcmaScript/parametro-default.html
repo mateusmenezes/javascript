@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="view port" content="width=device-width, initial-scale=1.0">
+    <title</title>
+</head>
+<body>
+
+
+    <script>
+        /*
+            a função com parâmetro default ela guarda um valor nos parametros da função antes de ser chamada,um valor padrão por nós colocado para que quando a função for chamada e não tiver os parametros que a função pede, a propria função assume esses valores que definimos
+        */ 
+        function contaHistoria(dog = 'Polly', atividade = 'morder'){
+
+            console.log(`Era uma vez um cachorro chamado ${dog} e ele gostava de ${atividade}`)
+
+        }
+        // observe que não foi passado parametro e então vai assumir os valores que foi adicionado na declaração da função
+
+        // observe que se quiser colocar alguns parametros e faltar outros, se coloca undefined para os valores que não serão passados
+        contaHistoria()
+
+
+
+
+    </script>
+</body>
+</html>

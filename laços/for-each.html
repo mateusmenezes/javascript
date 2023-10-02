@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        // é uma função aplicada á array, funciona como o for in
+        let vetor = ['jorge', 'hamilton', 'jose', 'ana', 'maria'];
+
+        /*
+            aguarda uma função de callback
+            observar a ordem dos parametros o primeiro é o valor atual, o segundo o indice e o terceiro o array completo
+
+
+            O forEach atua somente em valores numericos partindo de zero
+
+        */
+
+        /*
+        Pode ser feito dessa maneira, colocando a função dentro de uma variavel, para o código ficar mais limpo
+
+        let functionArray = function(valor, indice, array){
+            // lógica
+            console.log(valor);
+        }
+        vetor.forEach(functionArray);
+        
+        */
+        
+        vetor.forEach(function(valor, indice, array){
+            // lógica
+            console.log(valor);
+        });
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

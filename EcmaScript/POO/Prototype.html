@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // como funciona a herança do javascript 
+    /*
+    OBSERVAR
+        - Todos os objetos do JavaScript descendem de Object
+
+        - Protótipo: é um primeiro exemplar, uma primeira ideia, modelo
+
+        TODA vez que criamos um objeto em JavaScript, esse objeto é herdeiro/filho/ de OBJECT, logo, esse objeto herda os atributos e métodos desse OBJECT
+
+        TODA vez que criamos um objeto JavaScript, esse objeto descente de OBJECT(desse prototipo/padrao)e OBJECT não é um objeto e sim uma função, por isso que a essencia do JavaScript é funções.
+    */ 
+
+
+
+
+// AVIAO COR, MODELO e LEVANTAR VOO
+
+
+//Em notação de Objeto literal 
+
+    let Aviao1 = {
+        cor: 'branco',
+        modelo: 'AirBus a380',
+        levantarVoo(){
+            console.log("Levantar voo")
+        }
+    }
+
+    console.log(Aviao1);
+
+
+
+
+//Em notação de Funcao construtora
+    
+    let AviaoF = function(){
+        this.cor = 'Vermelho'
+        this.modelo = 'Boeing 787'
+        this.levantarVoo = function(){
+            console.log("Levantar voo")
+        }
+    }
+    let aviao2 = new AviaoF()
+ 
+
+// Notação de CLASSE
+    
+    class AviaoC{
+        constructor(){
+            this.cor = 'azul'
+            this.modelo = 'gol 1200'
+        }
+
+        levantarVoo(){
+            console.log('levantar voo')
+        }
+    }
+
+    let aviao3 = new AviaoC()
+
+
+
+
+
+    </script>
+</body>
+</html>

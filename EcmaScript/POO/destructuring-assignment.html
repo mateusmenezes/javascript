@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            destructuring assignment -> atribuição de desestruturação
+
+            O operador destructuring vai desestruturar/quebrar as estruturas de dados, sendo elas um array ou um objeto
+        */ 
+
+        let frutas = ['abacaxi', 'uva', 'pera', 'mamao']
+ 
+        /*
+           indicar qual o operador para declarar a variavel(let ou const), o token da feature do destructuring é a mesma do array ou do objeto, mas é usado do lado esquerdo do operador de atribuição.
+
+           alem disso, podemos utilizar um valor default, para caso o valor dentro do destructuring não retorne um valor, utilizando o perador de igual e passando um valor direto na declaracao da variavel
+        */ 
+
+        //   0  1  2  3
+        let [a, b, , c] = frutas // o espaço vazio pula um indice
+        console.log(a, b, c)
+
+
+
+        // destructuring em matriz
+        let coisas = [
+            ['abacaxi', 'uva', 'pera', 'mamao'],
+            ['joao', 'maria', 'clara', 'ana']
+        ]
+
+        let [[, ,e]] = coisas
+        console.log(e)
+
+
+
+        //destructuring em objeto
+
+        let produto = {
+            descricao: 'notebook',
+            preco: 3700,
+            detalhes: {
+                fabricante: 'abc',
+                modelo: 'xyz'
+            }
+        }
+        // observar que o nome da variavel tem que ser igual ao nome do atributo do objeto, mas dentro da desestruturacao podemos mudar o valor da variavel  usando dois-pontos e na frente o nome que queremos colocar
+        let {descricao: d, preco: p, detalhes} = produto
+
+        // observar que para desestruturar um objeto dentro do objeto usa-se a mesma sintaxe para mudar o nome, porem, abre-se uma nova desestruturação e recupera os valores contido dentro do objeto 
+        let {detalhes: {fabricante: f, modelo: m}} = produto
+
+        console.log(f, m)
+
+
+
+
+        //Destructuring no contexto de função usando array
+
+        let arr = [10, 20, 30, 40]
+
+        function impressao([ a, b, , c, d = 100 ]){
+            // a = 10, b = 20, c = 40, d = 100 (como não possui o valor de d, por default, d recebe o valor de default)
+            console.log(a, b, c, d)
+        }
+
+        impressao(arr)
+
+
+        // destructuring no contexto de funcao usando objeto
+
+
+        let objeto = {
+            a: 10,
+            b: 20,
+            c: {
+                d: 30,
+                e: 40
+            }
+        }
+
+        function Objeto({a:item1, b:item2, c: {d: item3}}){
+
+            console.log(item1, item2, item3)
+        }
+
+        Objeto(objeto)
+
+
+
+
+
+        //Destructuring no contexto do operador REST/SPREAD
+
+        let objetos = {
+            a: 10,
+            b: 20,
+            c: 30
+        }
+        let array = [50, 60, 70, 80, 90]
+        // let [a, ...b] = array
+        // let {a, ...z} = objetos
+
+        function multiplica([a, ...b]){
+            console.log(a)
+            console.log(b)
+        }
+
+
+        multiplica(array)
+
+
+
+    </script>
+</body>
+</html>

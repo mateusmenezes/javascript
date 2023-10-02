@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var e let</title>
+</head>
+<body>
+    <!--  
+        Em JavaScript, o objeto de janela é o objeto de escopo global, o que significa que variáveis, propriedades e métodos pertecem ao objeto janela por padrão
+
+
+        
+        no JS tem três tipos de escopos:
+        * (window)global disponivel em todo o codigo
+        * função 
+        * bloco
+
+        var ->  variaveis criadas em VAR sofrem hoisting, elevam um nível, somente em escopo de bloco.
+
+
+        let -> Variaveis conserva o escopo onde a variavel é criada sem sofrer hoisting
+    -->
+    <script>
+
+
+        //observar que os dois grupos de blocos  imprimem valores diferentes.
+
+        var serie = 'friends'
+
+        if(true){
+            var serie = 'peaky blinders'
+            console.log("dentro Bloco: " + serie)
+        }
+        console.log("Fora do Bloco: " + serie)
+
+
+
+
+
+
+
+        let serie2 = 'narcos'
+        if(true){
+            let serie2 = 'friends'
+            console.log("dentro Bloco: " + serie2)
+        }
+        console.log("Fora do Bloco: " + serie2)
+
+
+    </script>
+
+</body>
+</html>

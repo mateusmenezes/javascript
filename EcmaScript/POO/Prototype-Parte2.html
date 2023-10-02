@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //prototype chain(cadeias de prototipos)
+
+        /*
+            TODOS os objetos herdam o prototype de objeto.
+
+            herdam o Object.prototype
+        */ 
+
+        object.prototype.attr4 = "d"
+        let animal = {
+            attr1: 'a'
+        }
+        let vertebrado = {
+            __proto__:animal,
+            attr2: 'b'
+        }
+        let ave = {
+            __proto__:vertebrado,
+            attr3: 'c'
+        }
+        /*
+            observar que acima, o operador __proto__ referencia o prototype do objeto indicado
+        */ 
+
+
+    </script>
+</body>
+</html>

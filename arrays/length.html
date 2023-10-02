@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>length</title>
+</head>
+<body>
+    <script>
+        /*
+            O atributo length retorna, na string, o tamanho da string, mas no array ele retorna o proximo índice. O atributo length vai retornar o valor correto do tamanho quando o indice começar em 0 e for sequencial 
+        */ 
+        let frutas =[] 
+        frutas['x'] = 'banana';
+        frutas[2] = 'uva';
+        frutas[4] = 'maça'
+        frutas['a'] = 'goiaba'
+        console.log(frutas.length);  //retorna um valor errado
+
+        let frutasSequencial =[]
+        frutasSequencial[0] = 'banana';
+        frutasSequencial[1] = 'uva';
+        frutasSequencial[2] = 'maça';
+        frutasSequencial[3] = 'goiaba';
+        console.log(frutasSequencial.length); //retorna um valor correto
+
+
+    </script>
+</body>
+</html>

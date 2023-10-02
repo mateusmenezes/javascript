@@ -1,0 +1,24 @@
+this =  "isto ou esta"
+
+o comportamento do THIS depende do contexto ou do escopo de onde ele está situado:
+1 -> depende do contexto e escopo
+2 -> Modo estrito
+
+ESCOPO:
+    - **ACESSO** as variaveis, funções e objetos numa parte do codigo durante o tempo de execução
+    - Determina a **VISIBILIDADE** desses recursos nas partes do código.
+    - Sempre que invocamos uma função, estamos criand um novo escopo.
+    
+
+CONTEXTO:
+    - Enquanto o ESCOPO se refere ás diversas variaveis, o  CONTEXTO se refere ao valor do THIS no mesmo ESCOPO.
+    - Pode ser mudado com funções especiais como: .apply(), .call(), .bind().
+    - No contexto de execução EXECUTION CONTEXT o contexto já muda para o conceito de ESCOPO.
+
+
+MODO ESTRITO: 
+    - muda a semantica do javascript
+    - `"use strict"` parar habilitar
+    - Elimina erros silenciosos 
+    - Evita algumas confusões
+    - Proíbe algumas sintaxes

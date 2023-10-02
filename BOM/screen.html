@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen</title>
+    <script>
+        /* 
+            screen, parecido com o window, também fornece informações sobre a tela do browser, mas com tamanho de largura e altura da parte interna do navegador onde os elementos HTML são renderizados
+
+
+
+            essas largura e altura representam o potencial ou o máximo que a largura e altura podem chegar, e não o tamanho que a tela está ocupando
+        */
+        let altura = window.screen.availHeight;
+        let largura = window.screen.availWidth;
+        document.write(`altura: ${altura} largura: ${largura}`);
+        if(largura < 500)
+            document.write("menu versão mobile");
+        else
+            document.write("menu versão desktop");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

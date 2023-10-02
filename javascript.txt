@@ -1,0 +1,228 @@
+* root é o elemento raiz e no documento html é a propria tag html
+
+* não ter mais de tres H: h1 h2 h3 ....
+
+* <abbr> é uma tag de abreviação e pode colocar um title para fazer um
+"resumo" quando descansar o mouse sobre a abreviação
+
+* podemos usar tags para escrever codigos no html que pegam da forma que
+colocamos. nessa estrutura:
+
+<pre>
+	<code>
+		document.write(data.setMouth())
+	</code>
+</pre>
+
+
+* a tag A tem o o atributo de DOWNLOAD que ao clicar baixa a imagem do
+lugar de redirecionar para um link
+
+* a atributo TARGET serve para indicar o alvo do disparo
+   - _self é o padrão
+   - _blank faz com que não saia da pagina atual
+
+* At rules ( at no ingles tem significado de @) regras com @
+
+
+Objeto -> dado estrutural (Cria uma estrutura)
+ * propriedades /atributos
+ * funcionalidades / métodos
+
+estrutura para escrever um objeto:
+
+{propriedade: "valor"}
+
+
+
+
+
+array -> (vetor) estrutura de dados/ agrupamento de dado
+
+exemplo: lista = []
+
+
+
+
+Variaveis -> espaço na memória do computador
+ * var	    varia (global)
+ * let 	    varia (local so funciona no bloco que foi declarada)
+ * const constante(local so funciona no bloco que foi declarada)
+
+
+'''''''''''''   dinamismo   '''''''''''''
+
+-- Javascript é fracamente tipada e dinâmica
+
+
+-- block statement( declaração de bloco)
+
+
+-- hoisting(elevação) Quer dizer que como o javascript é lido de
+cima para baixo e VAR é uma variável global, por debaixo dos
+panos a linguagem leva a variável pra cima do código sem nenhum
+valor então ela fica indefinida
+
+-- 
+
+
+
+
+--------------FUNÇÕES-----------------
+
+function constructor -> 
+
+expressão new
+cria um novo objeto
+ palavra chave this
+
+
+
+--------prototype--------
+ vem da ideia de foi criado antes
+
+js é baseada em prototipo
+
+.split separa e dentro da função passa um parametro para indicar
+pelo que  vai separar    Ex: .split(",")
+
+.join junta as partes de um array Ex: join("_")
+
+.includes serve para buscar uma palavra na string .includes("palavra")
+
+
+transformar string em array
+O array já um objeto, então pode usar o metodo .from para transformar
+
+
+
+----------ARRAY ---------------
+O método indexOf() retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente
+
+// adicionar um item no fim do array
+	.push()
+
+//adicionar no começo
+	.unshift()
+
+// remover do fim
+	.pop()
+
+// remover do começo
+	.shift()
+
+//pegar somente alguns elementos do array
+	deve indicar o elemento inicial e o final
+	.slice(inicio, fim)
+
+// remover um ou mais itens em qualquer posição
+	
+	splice(indice, quantidade)
+
+//encontrar a posição do elemento no array
+	.indexOf()
+ 
+
+
+
+----------- operadores logico ---------
+
+and && 
+or ||
+not !
+
+----- operador ternario ------
+
+ let variavel = 5 < 4? 'É maior': 'É menor';
+
+
+---------falsy and truthy ----------
+quando ele está num lugar onde o booleano é obrigatorio
+
+Falsy:
+false, 0, -0, null, undefined, NaN
+
+truthy:
+true, {}, 1, 3.2, -1, infinity ou o negativo, "0", "false"
+
+
+
+
+---------throw e try/catch ------------
+throw ele dispara alguma coisa quando dá erro
+
+
+o try tenta rodar a aplicação e se não der, o catch captura o erro
+
+exemplo: 
+
+function SayMyName(name = " ")(
+if( name = " ")(
+	throw 'nome é obrigatorio'
+)
+
+)
+
+
+try(
+	SayMyName()
+)catch(e)(
+	console.log(e)
+)
+
+
+
+--------ESTRUTURA DE REPETIÇÃO-------------
+
+for = para
+
+for(let i = 0; i<10; i++){
+	if( i == 5)(
+		// aqui possui duas opções:
+		break para o loop
+		continue ignora esse passo do loop
+	)
+}
+
+
+estrutura for of
+
+essa estrutura pega caractere por caractere da string e vai
+imprimindo uma  a uma 
+
+let name = "Mateus"
+
+for(let char of name)(
+	console.log(char)
+)
+
+saida = M
+	A
+	T
+	...
+
+
+
+estrutura for in
+
+loop em cima do objeto pegando as propriedades do objeto
+
+Ex:
+
+let person = {
+   name: Mateus,
+   age: 20,
+   weight: 46
+}
+
+for(let property in person)(
+	console.log(property)
+
+)
+
+
+
+
+
+
+

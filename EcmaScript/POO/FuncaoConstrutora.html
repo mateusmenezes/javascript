@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            Criação de objetos a partir de funções construtoras
+            - a função construtura vai fazer a construcao do objeto sem precisar do proprio constructor
+            - vai ser uma funçao que vai ser chamada para criação de objeto com o operador NEW
+        */
+
+//funções construtoras é a base de criacao de objeto no javascript
+
+        let Carro = function(){
+            this.cor = 'Amarelo'
+            this.modelo = 'chevette'
+            this.velocidade = 80
+            this.velocidadeMaxima = 130
+            this.acelerar = () => {
+                this.velocidade += 10
+            }
+        }
+
+        let carro = new Carro()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

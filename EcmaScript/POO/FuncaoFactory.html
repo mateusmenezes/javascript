@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            design pattern factory(padrao de projeto factory)
+            podemos implementar uma "Fabrica" para criacao de objetos em tempo de execução(dinamico)
+        */ 
+
+    // objeto literal
+
+        let Bicicleta1 = {
+            cor: 'branco',
+            marcha: 'unica',
+            aro: 20,
+            pedalar(){
+                console.log('pedalando...')
+            }
+        }
+
+        console.log(Bicicleta1)
+
+    // funcao factory estatico
+
+        let BicicletaFactoryStatic = function(){
+            //logica
+
+            return {
+                cor: 'branco',
+                marcha: 'unica',
+                aro: 20,
+                pedalar(){
+                    console.log('pedalando...')
+                }
+            }
+        }
+
+        let bicicleta3 = BicicletaFactoryStatic()
+
+        // funcao factory dinâmico
+
+        let BicicletaFactoryDinamic = function(cor, marcha, aro){
+        //logica
+
+            return {
+                cor: cor,
+                marcha: marcha,
+                aro: aro,
+                pedalar(){
+                    console.log('pedalando...')
+                }
+            }
+        }
+        let bicicleta4 = BicicletaFactoryDinamic('vermelha', 'unica', 19)
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
